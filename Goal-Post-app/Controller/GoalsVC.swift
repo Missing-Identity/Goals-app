@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  GoalsVC.swift
 //  Goal-Post-app
 //
 //  Created by Unmilan on 04/09/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class GoalsVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

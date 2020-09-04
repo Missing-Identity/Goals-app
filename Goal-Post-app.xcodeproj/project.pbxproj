@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		727238E825024D8B00CD6B2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727238E725024D8B00CD6B2A /* AppDelegate.swift */; };
 		727238EA25024D8B00CD6B2A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727238E925024D8B00CD6B2A /* SceneDelegate.swift */; };
-		727238EC25024D8B00CD6B2A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727238EB25024D8B00CD6B2A /* ViewController.swift */; };
+		727238EC25024D8B00CD6B2A /* GoalsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727238EB25024D8B00CD6B2A /* GoalsVC.swift */; };
 		727238EF25024D8B00CD6B2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 727238ED25024D8B00CD6B2A /* Main.storyboard */; };
 		727238F225024D8B00CD6B2A /* Goal_Post_app.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 727238F025024D8B00CD6B2A /* Goal_Post_app.xcdatamodeld */; };
 		727238F425024D9500CD6B2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 727238F325024D9500CD6B2A /* Assets.xcassets */; };
@@ -20,7 +20,7 @@
 		727238E425024D8B00CD6B2A /* Goal-Post-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Goal-Post-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		727238E725024D8B00CD6B2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		727238E925024D8B00CD6B2A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		727238EB25024D8B00CD6B2A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		727238EB25024D8B00CD6B2A /* GoalsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsVC.swift; sourceTree = "<group>"; };
 		727238EE25024D8B00CD6B2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		727238F125024D8B00CD6B2A /* Goal_Post_app.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Goal_Post_app.xcdatamodel; sourceTree = "<group>"; };
 		727238F325024D9500CD6B2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,9 +58,12 @@
 		727238E625024D8B00CD6B2A /* Goal-Post-app */ = {
 			isa = PBXGroup;
 			children = (
+				7272390125024EAC00CD6B2A /* Extensions */,
+				7272390025024EA500CD6B2A /* Enums */,
+				727238FF25024E8B00CD6B2A /* View */,
+				727238FE25024E7B00CD6B2A /* Controller */,
 				727238E725024D8B00CD6B2A /* AppDelegate.swift */,
 				727238E925024D8B00CD6B2A /* SceneDelegate.swift */,
-				727238EB25024D8B00CD6B2A /* ViewController.swift */,
 				727238ED25024D8B00CD6B2A /* Main.storyboard */,
 				727238F325024D9500CD6B2A /* Assets.xcassets */,
 				727238F525024D9500CD6B2A /* LaunchScreen.storyboard */,
@@ -68,6 +71,35 @@
 				727238F025024D8B00CD6B2A /* Goal_Post_app.xcdatamodeld */,
 			);
 			path = "Goal-Post-app";
+			sourceTree = "<group>";
+		};
+		727238FE25024E7B00CD6B2A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				727238EB25024D8B00CD6B2A /* GoalsVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		727238FF25024E8B00CD6B2A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7272390025024EA500CD6B2A /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		7272390125024EAC00CD6B2A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,7 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				727238EC25024D8B00CD6B2A /* ViewController.swift in Sources */,
+				727238EC25024D8B00CD6B2A /* GoalsVC.swift in Sources */,
 				727238E825024D8B00CD6B2A /* AppDelegate.swift in Sources */,
 				727238F225024D8B00CD6B2A /* Goal_Post_app.xcdatamodeld in Sources */,
 				727238EA25024D8B00CD6B2A /* SceneDelegate.swift in Sources */,
