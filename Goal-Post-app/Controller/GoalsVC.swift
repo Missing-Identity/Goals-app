@@ -10,11 +10,17 @@ import UIKit
 
 class GoalsVC: UIViewController {
 
+    @IBOutlet weak var TableView: UITableView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func addGoalBtnwasPressed(_ sender: Any) {
+        print("Button was pressed")
+    }
+    
 }
 

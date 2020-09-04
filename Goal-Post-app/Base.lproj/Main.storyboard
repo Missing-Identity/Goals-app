@@ -41,6 +41,9 @@
                                             <constraint firstAttribute="height" constant="40" id="sLm-Rr-r9U"/>
                                         </constraints>
                                         <state key="normal" image="addGoal"/>
+                                        <connections>
+                                            <action selector="addGoalBtnwasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dng-5e-sfB"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.42745098039215684" green="0.73725490196078436" blue="0.38823529411764707" alpha="1" colorSpace="calibratedRGB"/>
@@ -98,6 +101,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="TableView" destination="6RX-OU-vLg" id="X8o-Yz-zt6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
