@@ -16,6 +16,7 @@
 		727238F425024D9500CD6B2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 727238F325024D9500CD6B2A /* Assets.xcassets */; };
 		727238F725024D9500CD6B2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 727238F525024D9500CD6B2A /* LaunchScreen.storyboard */; };
 		72A4DECF250645870071EFBC /* CreateGoalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A4DECE250645870071EFBC /* CreateGoalVC.swift */; };
+		72A4DED125066D440071EFBC /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A4DED025066D440071EFBC /* UIViewControllerExt.swift */; };
 		72E02643250265D9008114C3 /* GoalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E02642250265D9008114C3 /* GoalCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		727238F625024D9500CD6B2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		727238F825024D9500CD6B2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72A4DECE250645870071EFBC /* CreateGoalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGoalVC.swift; sourceTree = "<group>"; };
+		72A4DED025066D440071EFBC /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 		72E02642250265D9008114C3 /* GoalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,6 +109,7 @@
 		7272390125024EAC00CD6B2A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				72A4DED025066D440071EFBC /* UIViewControllerExt.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 			files = (
 				727238EC25024D8B00CD6B2A /* GoalsVC.swift in Sources */,
 				727238E825024D8B00CD6B2A /* AppDelegate.swift in Sources */,
+				72A4DED125066D440071EFBC /* UIViewControllerExt.swift in Sources */,
 				723C3C8525055B020079D48A /* GoalType.swift in Sources */,
 				727238F225024D8B00CD6B2A /* Goal_Post_app.xcdatamodeld in Sources */,
 				72A4DECF250645870071EFBC /* CreateGoalVC.swift in Sources */,

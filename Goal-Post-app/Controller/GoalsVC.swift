@@ -23,7 +23,10 @@ class GoalsVC: UIViewController {
     }
 
     @IBAction func addGoalBtnwasPressed(_ sender: Any) {
-        print("Button was pressed")
+        guard let createGoalVC = storyboard?.instantiateViewController(identifier: "CreateGoalVC") else {
+            return//This will let us exit this with no error in case the view controller identifier is wrong.
+        }
+        presentDetail(createGoalVC)//This presents the custom animation on Btn press and note that presentDetail function is available only in UIViewController.
     }
     
 }

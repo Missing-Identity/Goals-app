@@ -29,7 +29,7 @@ class CreateGoalVC: UIViewController {
     
     @IBAction func backBtnWasPressed(_ sender: Any) {
         
-        dismiss(animated: true, completion: nil)//The dismiss function along with nil completion basically dismisses the segues without doing anything else.
+        dismissDetail()//The dismiss function creates a segue back to the previous view.
         
     }
     
