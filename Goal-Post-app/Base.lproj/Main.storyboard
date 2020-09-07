@@ -228,9 +228,9 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" axis="vertical" alignment="top" spacing="51" translatesAutoresizingMaskIntoConstraints="NO" id="bAV-gx-cnn">
-                                <rect key="frame" x="20" y="138" width="374" height="315"/>
+                                <rect key="frame" x="20" y="140" width="374" height="315"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="What is your goal?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4T6-hd-5Rx">
+                                    <textView clipsSubviews="YES" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="What is your goal?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4T6-hd-5Rx">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="135.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -239,6 +239,9 @@
                                     </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Select One:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZ1-gL-s2x">
                                         <rect key="frame" x="0.0" y="186.5" width="374" height="27.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="27.5" id="T0r-qp-FUm"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -279,6 +282,7 @@
                                     <constraint firstItem="4T6-hd-5Rx" firstAttribute="leading" secondItem="bAV-gx-cnn" secondAttribute="leading" id="87Q-KM-N67"/>
                                     <constraint firstAttribute="trailing" secondItem="IZ1-gL-s2x" secondAttribute="trailing" id="BgD-uE-Ylq"/>
                                     <constraint firstItem="IZ1-gL-s2x" firstAttribute="leading" secondItem="bAV-gx-cnn" secondAttribute="leading" id="EgG-U8-sVj"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="315" id="UdW-gB-1AN"/>
                                     <constraint firstAttribute="trailing" secondItem="4T6-hd-5Rx" secondAttribute="trailing" id="cJ6-AP-2HH"/>
                                     <constraint firstAttribute="trailing" secondItem="bwW-Up-RmX" secondAttribute="trailing" id="nBx-LU-UvJ"/>
                                     <constraint firstItem="bwW-Up-RmX" firstAttribute="leading" secondItem="bAV-gx-cnn" secondAttribute="leading" id="zWB-yB-tfS"/>
@@ -302,7 +306,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="hy9-iu-bZI" firstAttribute="trailing" secondItem="bAV-gx-cnn" secondAttribute="trailing" constant="20" id="2Wf-t3-Om4"/>
-                            <constraint firstItem="bAV-gx-cnn" firstAttribute="top" secondItem="eWF-qM-tcw" secondAttribute="bottom" constant="8" id="3a7-Ar-j6z"/>
+                            <constraint firstItem="bAV-gx-cnn" firstAttribute="top" secondItem="eWF-qM-tcw" secondAttribute="bottom" constant="10" id="HwB-nd-VHx"/>
                             <constraint firstItem="s5q-Jq-Dy3" firstAttribute="top" relation="greaterThanOrEqual" secondItem="bAV-gx-cnn" secondAttribute="bottom" constant="20" id="LtD-DI-Aqn"/>
                             <constraint firstItem="eWF-qM-tcw" firstAttribute="trailing" secondItem="hy9-iu-bZI" secondAttribute="trailing" id="MTv-fx-EeA"/>
                             <constraint firstItem="eWF-qM-tcw" firstAttribute="leading" secondItem="hy9-iu-bZI" secondAttribute="leading" id="Qh5-yM-5si"/>

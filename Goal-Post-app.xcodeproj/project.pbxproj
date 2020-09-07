@@ -17,6 +17,8 @@
 		727238F725024D9500CD6B2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 727238F525024D9500CD6B2A /* LaunchScreen.storyboard */; };
 		72A4DECF250645870071EFBC /* CreateGoalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A4DECE250645870071EFBC /* CreateGoalVC.swift */; };
 		72A4DED125066D440071EFBC /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A4DED025066D440071EFBC /* UIViewControllerExt.swift */; };
+		72A4DED32506819D0071EFBC /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A4DED22506819D0071EFBC /* UIViewExt.swift */; };
+		72A4DED525069DCC0071EFBC /* UIButtonExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A4DED425069DCC0071EFBC /* UIButtonExt.swift */; };
 		72E02643250265D9008114C3 /* GoalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E02642250265D9008114C3 /* GoalCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +35,8 @@
 		727238F825024D9500CD6B2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72A4DECE250645870071EFBC /* CreateGoalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGoalVC.swift; sourceTree = "<group>"; };
 		72A4DED025066D440071EFBC /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
+		72A4DED22506819D0071EFBC /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
+		72A4DED425069DCC0071EFBC /* UIButtonExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExt.swift; sourceTree = "<group>"; };
 		72E02642250265D9008114C3 /* GoalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +114,8 @@
 			isa = PBXGroup;
 			children = (
 				72A4DED025066D440071EFBC /* UIViewControllerExt.swift */,
+				72A4DED22506819D0071EFBC /* UIViewExt.swift */,
+				72A4DED425069DCC0071EFBC /* UIButtonExt.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -185,6 +191,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72A4DED32506819D0071EFBC /* UIViewExt.swift in Sources */,
+				72A4DED525069DCC0071EFBC /* UIButtonExt.swift in Sources */,
 				727238EC25024D8B00CD6B2A /* GoalsVC.swift in Sources */,
 				727238E825024D8B00CD6B2A /* AppDelegate.swift in Sources */,
 				72A4DED125066D440071EFBC /* UIViewControllerExt.swift in Sources */,
