@@ -20,6 +20,7 @@
 		72A4DED32506819D0071EFBC /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A4DED22506819D0071EFBC /* UIViewExt.swift */; };
 		72A4DED525069DCC0071EFBC /* UIButtonExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A4DED425069DCC0071EFBC /* UIButtonExt.swift */; };
 		72E02643250265D9008114C3 /* GoalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E02642250265D9008114C3 /* GoalCell.swift */; };
+		72FE1A6E2507E4C80096F122 /* FinishGoalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FE1A6D2507E4C80096F122 /* FinishGoalVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		72A4DED22506819D0071EFBC /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
 		72A4DED425069DCC0071EFBC /* UIButtonExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExt.swift; sourceTree = "<group>"; };
 		72E02642250265D9008114C3 /* GoalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCell.swift; sourceTree = "<group>"; };
+		72FE1A6D2507E4C80096F122 /* FinishGoalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishGoalVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 			children = (
 				727238EB25024D8B00CD6B2A /* GoalsVC.swift */,
 				72A4DECE250645870071EFBC /* CreateGoalVC.swift */,
+				72FE1A6D2507E4C80096F122 /* FinishGoalVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				727238EC25024D8B00CD6B2A /* GoalsVC.swift in Sources */,
 				727238E825024D8B00CD6B2A /* AppDelegate.swift in Sources */,
 				72A4DED125066D440071EFBC /* UIViewControllerExt.swift in Sources */,
+				72FE1A6E2507E4C80096F122 /* FinishGoalVC.swift in Sources */,
 				723C3C8525055B020079D48A /* GoalType.swift in Sources */,
 				727238F225024D8B00CD6B2A /* Goal_Post_app.xcdatamodeld in Sources */,
 				72A4DECF250645870071EFBC /* CreateGoalVC.swift in Sources */,
