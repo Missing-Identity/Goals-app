@@ -373,11 +373,11 @@
                                     <constraint firstAttribute="height" constant="130" id="t83-f9-Xg4"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="NZ9-w8-5V0">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="NZ9-w8-5V0">
                                 <rect key="frame" x="20" y="150" width="374" height="145"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many points until complete?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Og9-Ac-7Xv">
-                                        <rect key="frame" x="35.5" y="0.0" width="303.5" height="25"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="7fX-FA-Df3"/>
                                         </constraints>
@@ -385,43 +385,55 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QpN-Fb-W1B">
-                                        <rect key="frame" x="169" y="60" width="36" height="85"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QpN-Fb-W1B">
+                                        <rect key="frame" x="0.0" y="60" width="374" height="85"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="85" id="yjT-7h-H1c"/>
                                         </constraints>
                                         <color key="textColor" red="0.42745098040000001" green="0.73725490199999999" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="60"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ULz-H9-gVb">
-                                <rect key="frame" x="0.0" y="821" width="414" height="75"/>
-                                <color key="backgroundColor" red="0.91764705879999997" green="0.66274509800000003" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dcE-DE-LOy">
+                                <rect key="frame" x="0.0" y="303" width="414" height="593"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ULz-H9-gVb">
+                                        <rect key="frame" x="0.0" y="518" width="414" height="75"/>
+                                        <color key="backgroundColor" red="0.91764705879999997" green="0.66274509800000003" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="t80-T6-WGB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="25"/>
+                                        <state key="normal" title="CREATE GOAL">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="createGoalBtnWasPressed:" destination="2mY-cI-pd0" eventType="touchUpInside" id="Fim-WV-DKb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="75" id="t80-T6-WGB"/>
+                                    <constraint firstAttribute="bottom" secondItem="ULz-H9-gVb" secondAttribute="bottom" id="h4E-Na-k0R"/>
+                                    <constraint firstItem="ULz-H9-gVb" firstAttribute="leading" secondItem="dcE-DE-LOy" secondAttribute="leading" id="i4E-56-UXv"/>
+                                    <constraint firstAttribute="trailing" secondItem="ULz-H9-gVb" secondAttribute="trailing" id="jed-SX-XSD"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="25"/>
-                                <state key="normal" title="CREATE GOAL">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="createGoalBtnWasPressed:" destination="2mY-cI-pd0" eventType="touchUpInside" id="Fim-WV-DKb"/>
-                                </connections>
-                            </button>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="9Nz-Lw-FoU" firstAttribute="top" secondItem="a2V-zI-qpJ" secondAttribute="top" id="49w-rI-hkk"/>
                             <constraint firstItem="jKQ-8h-OP0" firstAttribute="trailing" secondItem="NZ9-w8-5V0" secondAttribute="trailing" constant="20" id="6OR-7R-arq"/>
+                            <constraint firstItem="dcE-DE-LOy" firstAttribute="trailing" secondItem="jKQ-8h-OP0" secondAttribute="trailing" id="A0A-Uc-Muc"/>
                             <constraint firstItem="9Nz-Lw-FoU" firstAttribute="trailing" secondItem="jKQ-8h-OP0" secondAttribute="trailing" id="Fwt-c5-27w"/>
-                            <constraint firstItem="ULz-H9-gVb" firstAttribute="trailing" secondItem="jKQ-8h-OP0" secondAttribute="trailing" id="XFt-w3-UYE"/>
+                            <constraint firstItem="dcE-DE-LOy" firstAttribute="leading" secondItem="jKQ-8h-OP0" secondAttribute="leading" id="Q68-dI-Nbi"/>
+                            <constraint firstAttribute="bottom" secondItem="dcE-DE-LOy" secondAttribute="bottom" id="e0E-1X-kQE"/>
                             <constraint firstItem="9Nz-Lw-FoU" firstAttribute="leading" secondItem="jKQ-8h-OP0" secondAttribute="leading" id="kIs-CQ-Da6"/>
-                            <constraint firstItem="ULz-H9-gVb" firstAttribute="leading" secondItem="jKQ-8h-OP0" secondAttribute="leading" id="rDe-XL-u2g"/>
+                            <constraint firstItem="dcE-DE-LOy" firstAttribute="top" secondItem="NZ9-w8-5V0" secondAttribute="bottom" constant="8" id="lMS-BP-GZ6"/>
                             <constraint firstItem="NZ9-w8-5V0" firstAttribute="top" secondItem="9Nz-Lw-FoU" secondAttribute="bottom" constant="20" id="rSV-d7-XtB"/>
                             <constraint firstItem="NZ9-w8-5V0" firstAttribute="leading" secondItem="jKQ-8h-OP0" secondAttribute="leading" constant="20" id="sau-yi-Nrk"/>
-                            <constraint firstAttribute="bottom" secondItem="ULz-H9-gVb" secondAttribute="bottom" id="tLG-px-JBd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jKQ-8h-OP0"/>
                     </view>
