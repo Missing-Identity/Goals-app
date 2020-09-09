@@ -79,7 +79,7 @@ extension GoalsVC: UITableViewDelegate, UITableViewDataSource {
         return .none//We keep none here cause we have a custom configuration here.
     }
     
-    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {//This code adds a "DELETE" button to a swipe action.
         let deleteAction = UITableViewRowAction(style: .destructive, title: "DELETE") { (rowAction, indexPath) in
             self.removeGoal(atIndexPath: indexPath)//This removes the row data from the index path from self.
             self.fetchCoreDataObjects()//This updates the table after a row data is deleted.
@@ -87,14 +87,40 @@ extension GoalsVC: UITableViewDelegate, UITableViewDataSource {
             tableView.deleteRows(at: [indexPath], with: .automatic)//This removes the row and animates the closing.
         }
         
-        deleteAction.backgroundColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
+        let addAction = UITableViewRowAction(style: .normal, title: "ADD 1") { (rowAction, indexPath) in
+            self.setProgress(atIndexPath: indexPath)
+            tableView.reloadRows(at: [indexPath], with: .automatic)
+        }//This code adds a "ADD 1" button to the swipe action.
         
-        return [deleteAction]//Remember to keep this in an array as its expecting return type to be array.
+        deleteAction.backgroundColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1) //Sets colour to the delete button.
+        addAction.backgroundColor = #colorLiteral(red: 0.9385011792, green: 0.7164435983, blue: 0.3331357837, alpha: 1) //Sets colour to the add button.
+        
+        return [deleteAction, addAction]//Remember to keep this in an array as its expecting return type to be array.
     }
     
 }
 
 extension GoalsVC {
+    
+    func setProgress(atIndexPath indexPath: IndexPath) {//This function will allow us to set progress.
+        
+        guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
+        
+        let chosenGoal = goals[indexPath.row]//Getting the goal data in the chosen index
+        
+        if chosenGoal.goalProgress < chosenGoal.goalCompletionValue {//Code will trigger only if progress is less than completion value.
+            chosenGoal.goalProgress = chosenGoal.goalProgress + 1//Adding 1 point to goal progress.
+        } else {
+            return
+        }
+        
+        do {
+            try managedContext.save()
+            print("Sucessfully set progress")
+        } catch {
+            debugPrint("Could not set progress: \(error.localizedDescription)")
+        }
+    }
     
     func removeGoal(atIndexPath indexPath: IndexPath) {
         
