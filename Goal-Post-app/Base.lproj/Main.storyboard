@@ -86,13 +86,14 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="dbu-8i-7Ly">
                                                     <rect key="frame" x="20" y="11" width="309" height="58"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="40T-9d-p5h">
+                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="40T-9d-p5h">
                                                             <rect key="frame" x="0.0" y="0.0" width="309" height="25"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Goal:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4EX-84-g6P">
                                                                     <rect key="frame" x="0.0" y="0.0" width="45" height="25"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="45" id="LyM-Dn-RHo"/>
+                                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="45" id="j76-6p-tGH"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
                                                                     <nil key="textColor"/>

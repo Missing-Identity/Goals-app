@@ -28,11 +28,19 @@ class GoalsVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        print("View will appear")
+        fetchCoreDataObjects()
+        tableView.reloadData()
+    }
+    
+    func fetchCoreDataObjects() {
         self.fetch { (complete) in
-            if goals.count >= 1 {
-                tableView.isHidden = false
-            } else {
-                tableView.isHidden = true
+            if complete {
+                if goals.count > 0 {
+                    tableView.isHidden = false
+                } else {
+                    tableView.isHidden = true
+                }
             }
         }
     }
