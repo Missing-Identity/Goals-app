@@ -71,9 +71,44 @@ extension GoalsVC: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {//This enables the row to be edited.
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {//This is for picking the type of editing style here.
+        return .none//We keep none here cause we have a custom configuration here.
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let deleteAction = UITableViewRowAction(style: .destructive, title: "DELETE") { (rowAction, indexPath) in
+            self.removeGoal(atIndexPath: indexPath)//This removes the row data from the index path from self.
+            self.fetchCoreDataObjects()//This updates the table after a row data is deleted.
+            
+            tableView.deleteRows(at: [indexPath], with: .automatic)//This removes the row and animates the closing.
+        }
+        
+        deleteAction.backgroundColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
+        
+        return [deleteAction]//Remember to keep this in an array as its expecting return type to be array.
+    }
+    
 }
 
 extension GoalsVC {
+    
+    func removeGoal(atIndexPath indexPath: IndexPath) {
+        
+        guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
+        
+        managedContext.delete(goals[indexPath.row])//This deletes a specific cell data depending on index.
+        
+        do {
+            try managedContext.save()//We are updating the core data here saying that we deleted a cell data.
+            print("Successfully removed goal.")
+        } catch {
+            debugPrint("Could not remove: \(error.localizedDescription)")
+        }
+    }
     
     func fetch(completion: (_ complete: Bool) -> ()) {
         guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
