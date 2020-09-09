@@ -21,10 +21,12 @@ extension UIViewController {//We will be overriding the default animations in th
         
         self.view.window?.layer.add(transition, forKey: kCATransition)//The kCATransition is a built in key that represents transition animation. We keep self so that all this code applies to whatever View Controller this file is linked to.
         
+        viewControllerToPresent.modalPresentationStyle = .fullScreen //Fixed the window modal issue.
+        
         present(viewControllerToPresent, animated: false, completion: nil)//This will apply the animation to the view. Note that we keep animated= false as we are overriding the existing animation already so keeping it as true will make our code here obselete.
     }
     
-    func presentSecondaryDetail(_ viewControllerToPresent: UIViewController) {//What this code does is that it dismisses the view controller passed into it once that view controller segues to the next one.
+    func presentSecondaryDetail(_ viewControllerToPresent: UIViewController) {//What this code does is that it dismisses the view controller once the view controller segues to the next one.
         
         let transition = CATransition()
         
