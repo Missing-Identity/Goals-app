@@ -33,7 +33,7 @@ class CreateGoalVC: UIViewController, UITextViewDelegate {
             
             finishGoalVC.initData(description: goalTextView.text!, type: goalType)
             
-            presentDetail(finishGoalVC)
+            presentingViewController?.presentSecondaryDetail(finishGoalVC)//We are saying goalsVC dismiss this view controller and present the new view controller at the same time.
         }
     }
     @IBAction func shortTermBtnWasPressed(_ sender: Any) {
