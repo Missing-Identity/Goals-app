@@ -29,8 +29,8 @@ class GoalsVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print("View will appear")
-        fetchCoreDataObjects()
         tableView.reloadData()
+        fetchCoreDataObjects()
     }
     
     func fetchCoreDataObjects() {
